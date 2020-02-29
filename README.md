@@ -25,18 +25,21 @@ _aliyeva852@gmail.com_
 
 ## Project Description 
 
-MVC: *User is able to view the data via graph 
-     * User is able to select the stock option
-     * User is able to Zoom in on graph 
-     * Provides a UI
+###MVC: 
+_User is able to view the data via graph_
+_User is able to select the stock option_
+_User is able to Zoom in on graph_ 
+_Provides a UI_
 
 
 
-Time to spare: * Add a crypto currency  option 
-               * Create a very aesthetic product 
-               * Create authentication for user  
-               * Subscribe to a curerncy/crypto
-               * Donation Page 
+###Time to spare: 
+_Add a crypto currency  option_
+_Create a very aesthetic product_ 
+_Create authentication for user_  
+_Subscribe to a curerncy/crypto_
+_Donation Page_
+
 ## Technologies Used
 
 _React, Material UI, Webpack_
