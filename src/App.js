@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import Stock from './stock.js'
+import Stock from './components/Stock.js';
+import Crypto from './components/Crypto';
 
 function App() {
   return (
     <div className="App">
       <Stock/>
+      <Crypto/>
     </div>
   );
 }
