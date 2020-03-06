@@ -1,13 +1,25 @@
 # _Stock-Capstone_
 
-#### _React Webapplication. 2.28.2020_
+#### _React Webapplication. 3.05.2020_
 
 #### By _** Jamila Aliyeva**_
 
 ## Description
 
-_In this application the user is able to access real-time stock value. The user is then able to navigate to various different stock options in order to view the stock data. This application is helpful to indiviuals who carry an interest in stock._
+## Description
+- The user has to register for an account 
+- The registered account gets saved onto Firebase database 
+- Once the user has an accout they are able to navigate to:
+### `Stock Chart`
+### `Crypto Chart`
+### `Exchange Rate` 
+- In the stock and crypto chart the user will be able to select the tyoe of market they would like to view
+- In the exchange rate the user wil be able to select currencies 
+- Once the user is finished using the app they are able to log-out
 
+##Component Tree
+
+![](Diagram.png)
 
 ## Setup/Installation Requirements
 
@@ -30,6 +42,7 @@ _User is able to view the data via graph_
 _User is able to select the stock option_
 _User is able to Zoom in on graph_ 
 _Provides a UI_
+_User Authentication_
 
 
 
@@ -39,10 +52,11 @@ _Create a very aesthetic product_
 _Create authentication for user_  
 _Subscribe to a curerncy/crypto_
 _Donation Page_
+_Host page on Firebase_
 
 ## Technologies Used
 
-_React, Material UI, Webpack_
+_React, Firebase, Node.js, Material UI _
 
 
 ### License
