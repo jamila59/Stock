@@ -34,21 +34,19 @@ _No known major bugs at this time._
 
 _aliyeva852@gmail.com_
 
-## Project Description 
+
 
 ###`MVC`: 
-_User is able to view the data via graph_
-_User is able to select the stock option_
-_User is able to Zoom in on graph_ 
-_Provides a UI_
 _User Authentication_
-
+_User auth saved to database_
+_User is able to select the stock option_
+_User is able to view cryptocurrency data via graph_
+_User is able to Zoom in on graph_ 
+_User is able to sign out_
 
 
 ###`Time to spare:` 
-_Add a crypto currency  option_
 _Create a very aesthetic product_ 
-_Create authentication for user_  
 _Subscribe to a curerncy/crypto_
 _Donation Page_
 _Host page on Firebase_
