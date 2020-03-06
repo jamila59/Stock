@@ -36,7 +36,7 @@ _aliyeva852@gmail.com_
 
 
 
-###`MVC`: 
+### `MVC`: 
 - User Authentication
 - User auth saved to database
 - User is able to select the stock option
@@ -45,7 +45,7 @@ _aliyeva852@gmail.com_
 - User is able to sign out
 
 
-###`Time to spare:` 
+### `Time to spare:` 
 -  Create a very aesthetic product 
 - Subscribe to a curerncy/crypto
 - Donation Page
