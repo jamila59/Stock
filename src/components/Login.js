@@ -1,57 +1,48 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import fire from './config/Fire';
+import React from 'react';
+import fire from './config/fire';
 
-class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.login = this.login.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.signup = this.signup.bind(this);
-    this.state = {
-      email: '',
-      password: ''
-    };
-  }
+class Login extends React.Component {
 
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
-  }
-
-  login(e) {
-    e.preventDefault();
-    fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-    }).catch((error) => {
-        console.log(error);
-      });
-  }
-
-  signup(e){
-    e.preventDefault();
-    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-    }).then((u)=>{console.log(u)})
-    .catch((error) => {
-        console.log(error);
+  signUp() {
+    const email = document.querySelector('#email').value;
+    const password = document.querySelector('#password').value;
+    fire.auth().createUserWithEmailAndPassword(email, password)
+      .then((u) => {
+        console.log('Successfully Signed Up');
+      })
+      .catch((err) => {
+        console.log('Error: ' + err.toString());
       })
   }
+
+  login() {
+    const email = document.querySelector('#email').value;
+    const password = document.querySelector('#password').value;
+    fire.auth().signInWithEmailAndPassword(email, password)
+      .then((u) => {
+        console.log('Successfully Logged In');
+      })
+      .catch((err) => {
+        console.log('Error: ' + err.toString());
+      })
+  }
+
   render() {
     return (
-       <div className="col-md-6">
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
-            </div>
-            <button type="submit" onClick={this.login} class="btn btn-primary">Login</button>
-            <button onClick={this.signup} style={{marginLeft: '25px'}} className="btn btn-success">Signup</button>
-        </form>
-    </div>
-    );
+      <div style={{ textAlign: 'center' }}>
+        <div>
+          <div>Email</div>
+          <input id="email" placeholder="Enter Email.." type="text"/>
+        </div>
+        <div>
+          <div>Password</div>
+          <input id="password" placeholder="Enter Password.." type="text"/>
+        </div>
+        <button style={{margin: '10px'}} onClick={this.login}>Login</button>
+        <button style={{margin: '10px'}} onClick={this.signUp}>Sign Up</button>
+      </div>
+    )
   }
 }
+
 export default Login;
