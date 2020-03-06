@@ -4,7 +4,6 @@
 
 #### By _** Jamila Aliyeva**_
 
-## Description
 
 ## Description
 - The user has to register for an account 
@@ -37,7 +36,7 @@ _aliyeva852@gmail.com_
 
 ## Project Description 
 
-###MVC: 
+###`MVC`: 
 _User is able to view the data via graph_
 _User is able to select the stock option_
 _User is able to Zoom in on graph_ 
@@ -46,7 +45,7 @@ _User Authentication_
 
 
 
-###Time to spare: 
+###`Time to spare:` 
 _Add a crypto currency  option_
 _Create a very aesthetic product_ 
 _Create authentication for user_  
