@@ -37,25 +37,26 @@ _aliyeva852@gmail.com_
 
 
 ###`MVC`: 
--User Authentication
--User auth saved to database
--User is able to select the stock option
--User is able to view cryptocurrency data via graph
--User is able to Zoom in on graph_
--User is able to sign out
+- User Authentication
+- User auth saved to database
+- User is able to select the stock option
+- User is able to view cryptocurrency data via graph
+- User is able to Zoom in on graph_
+- User is able to sign out
 
 
 ###`Time to spare:` 
--Create a very aesthetic product 
--Subscribe to a curerncy/crypto
--Donation Page
--Host page on Firebase
+-  Create a very aesthetic product 
+- Subscribe to a curerncy/crypto
+- Donation Page
+- Host page on Firebase
+
 ## Technologies Used
 
--React
--Firebase
--Node.js 
--Material UI 
+- React
+- Firebase
+- Node.js 
+- Material UI 
 
 
 ### License
