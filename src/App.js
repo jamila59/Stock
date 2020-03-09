@@ -3,7 +3,7 @@ import fire from './config/fire'
 import Login from './components/Login.js';
 import Stock from './components/Stock'
 import Home from './components/Home.js';
-import InputWithIcon from './components/Selector';
+import ClippedDrawer from './components/Selector';
 
 class App extends Component {
 
@@ -34,7 +34,9 @@ class App extends Component {
     return (
       <div className="App">
         {/* { this.state.user ? ( <Home /> ) : ( <Login /> ) } */}
-        <Login />
+        <ClippedDrawer/>
+        {/* <Home/> */}
+        {/* <Stock/> */}
       </div>
     );
   }

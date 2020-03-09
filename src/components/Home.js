@@ -1,6 +1,8 @@
 import React from 'react';
 import fire from './../config/fire';
 import Stock from './Stock';
+import { ThemeProvider } from '@material-ui/core';
+
 
 class Home extends React.Component {
 
@@ -13,10 +15,8 @@ class Home extends React.Component {
       <div style={{textAlign: 'center'}}>
         <h1>You Are Logged In</h1>
         <button onClick = {this.logout}>Logout</button>
-        <Stock/>
       </div>
     )
   }
 }
-
 export default Home;

@@ -30,7 +30,7 @@ class Stock extends React.Component {
 
   componentDidUpdate(prevState){
     if( prevState.value !== this.state.value){
-      // this.fetchStock();
+      this.fetchStock();
     }
   }
 
