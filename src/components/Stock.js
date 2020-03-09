@@ -28,6 +28,12 @@ class Stock extends React.Component {
     this.fetchStock();
   }
 
+  componentDidUpdate(prevState){
+    if( prevState.value !== this.state.value){
+      // this.fetchStock();
+    }
+  }
+
   fetchStock() {
     const pointerToThis = this;
     console.log(pointerToThis);
