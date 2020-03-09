@@ -1,13 +1,27 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
 
+
 class Stock extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       stockChartXValues: [],
-      stockChartYValues: []
+      stockChartYValues: [],
+      value: 'FB'
     }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event){
+    this.setState({value: event.target.value});
+     console.log(this.state.value);
+  }
+
+  handleSubmit(event){
+    console.log(this.state.value);
+    event.preventDefault();
   }
 
   componentDidMount() {
@@ -18,7 +32,9 @@ class Stock extends React.Component {
     const pointerToThis = this;
     console.log(pointerToThis);
     const API_KEY = 'HGJWFG4N8AQ66ICD';
-    let StockSymbol = 'FB';
+    // let e = document.getElementById("stock");
+    // let StockSymbol = e.options[e.selectedIndex].text;
+    let StockSymbol = this.state.value;
     let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${StockSymbol}&outputsize=compact&apikey=${API_KEY}`;
     let stockChartXValuesFunction = [];
     let stockChartYValuesFunction = [];
@@ -47,10 +63,21 @@ class Stock extends React.Component {
       )
   }
 
+  
   render() {
     return (
       <div>
         <h1>Stock Market</h1>
+        <form onSubmit={this.handleSubmit}>
+        <label for="stock">Stock:
+        <select  value={this.state.value} onChange={this.handleChange} id="stock">
+          <option value="FB">FB</option>
+          <option value="GOLD">GOLD</option>
+        </select>
+        </label>
+        <input type="submit" value="Submit"/>
+        </form>
+
         <Plot
           data={[
             {

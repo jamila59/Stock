@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import fire from './config/fire'
 import Login from './components/Login.js';
+import Stock from './components/Stock'
 import Home from './components/Home.js';
+import DialogSelect from './components/Selector';
 
 class App extends Component {
 
@@ -32,6 +34,7 @@ class App extends Component {
     return (
       <div className="App">
         { this.state.user ? ( <Home /> ) : ( <Login /> ) }
+        <Stock/>
       </div>
     );
   }
