@@ -11,8 +11,9 @@ import { Link } from 'react-router-dom';
 import ShowChartIcon from '@material-ui/icons/ShowChart';
 import ShareIcon from '@material-ui/icons/Share';
 import Button from '@material-ui/core/Button';
+import Fab from '@material-ui/core/Fab';
 
-const drawerWidth = 240;
+const drawerWidth = 400;
 
  const root = {
    display: 'flex'
@@ -34,10 +35,17 @@ const appBar = {
 }
 
 const icon = {
-  width: 60,
-  height: 60
+  width: 70,
+  height: 70,
+  paddingLeft: '5px'
 }
 
+const button = {
+  paddingLeft: '750px'
+}
+// const text = {
+//   paddingLeft: '20px'
+// }
 class Home extends React.Component {
 
   logout() {
@@ -52,7 +60,7 @@ class Home extends React.Component {
         <Toolbar>
           <Typography variant="h6" noWrap>
             Welcome!
-            <Button onClick = {this.logout} variant="contained" color="primary" disableElevation>
+            <Button onClick = {this.logout} variant="contained" color="primary" disableElevation  style={button}>
             Logout
             </Button>
           </Typography>
@@ -64,23 +72,25 @@ class Home extends React.Component {
       >
         <div style={toolbar} />
         <br/>
-        <ShowChartIcon
-        style={icon}/>
-        <Link to="/stock">Stock</Link>
+        <Fab to='/stock' component={Link} >
+          <ShowChartIcon style={icon}/>
+        </Fab>
+        <h2 >Stock</h2>
+        <Divider />
         <br/>
-        <ShareIcon
-         style={icon}/>
-         <Link to="/crypto">Cryptocurrency</Link>
+        <Fab  to='/crypto' component={Link} >
+          <ShareIcon style={icon}/>
+        </Fab>
+        <h2>Cryptocurrency</h2>
         <Divider />
       </Drawer>
-      <main>
+      <main>s
         <div style={toolbar} />
       </main>
     </div>
-      
     )
   }
 }
+
 export default Home;
 
- 

@@ -36,6 +36,9 @@ class App extends Component {
     return (
       <div className="App">
         { this.state.user ? ( <Home /> ) : ( <Login /> ) }
+        {/* <ClippedDrawer/> */}
+        {/* <Home/> */}
+        {/* <Stock/> */}
         <Switch>
           <Route exact path='/crypto' component={Crypto} />
           <Route path='/stock' component={Stock} /> 

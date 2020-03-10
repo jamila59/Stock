@@ -3,25 +3,43 @@ import Plot from 'react-plotly.js';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
-class Stock extends React.Component {
+class Crypto extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       stockChartXValues: [],
-      stockChartYValues: []
+      stockChartYValues: [],
+      value: 'BTC'
     }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  handleChange(event){
+    this.setState({value: event.target.value});
+     console.log(this.state.value);
+  }
+
+  handleSubmit(event){
+    console.log(this.state.value);
+    event.preventDefault();
+    this.fetchStock();
+  }
   componentDidMount() {
     this.fetchStock();
   }
+  // componentDidUpdate(prevState){
+  //   if( prevState.value !== this.state.value){
+  //     // this.fetchStock();
+  //   }
+  // } 
   
 
   fetchStock() {
     const pointerToThis = this;
     console.log(pointerToThis);
     const API_KEY = 'HGJWFG4N8AQ66ICD';
-    let symbol = 'BTC';
+    let symbol = this.state.value;
     let API_Call = `https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=${symbol}&market=USD&apikey=${API_KEY}`;
     let stockChartXValuesFunction = [];
     let stockChartYValuesFunction = [];
@@ -56,6 +74,24 @@ class Stock extends React.Component {
       <Card>
         <CardContent>
         <h1>Crypto Market</h1>
+        <form onSubmit={this.handleSubmit}>
+        <label for="stock">Stock:
+        <select value={this.state.value} onChange={this.handleChange} id="crypto">
+          <option value="BTC">BTC</option>
+          <option value="ETH">ETH</option>
+          <option value="XRP">XRP</option>
+          <option value="LTC">LTC</option>
+          <option value="USDT">USDT</option>
+          <option value="BCH">BCH</option>
+          <option value="XMR">XMR</option>
+          <option value="EOS">EOS</option>
+          <option value="XMR">XMR</option>
+          <option value="BNB">BNB</option>
+        </select>
+        </label>
+        <input type="submit" value="Submit"/>
+        </form>
+
         <Plot 
           data={[
             {
@@ -76,9 +112,9 @@ class Stock extends React.Component {
 }
 const moveCard = {
   paddingTop: '100px',
-  paddingLeft:'125px',
+  paddingLeft:'170px',
 }
 
 
-export default Stock;
+export default Crypto;
 
