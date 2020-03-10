@@ -4,6 +4,7 @@ import Login from './components/Login.js';
 import Stock from './components/Stock'
 import Home from './components/Home.js';
 import ClippedDrawer from './components/Selector';
+import { Switch, Route, } from 'react-router-dom';
 
 class App extends Component {
 
@@ -37,6 +38,10 @@ class App extends Component {
         {/* <ClippedDrawer/> */}
         {/* <Home/> */}
         {/* <Stock/> */}
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/login' component={Login} /> 
+        </Switch>
       </div>
     );
   }

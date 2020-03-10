@@ -1,7 +1,6 @@
 import React from 'react';
 import fire from './../config/fire';
 import Stock from './Stock';
-// import { ThemeProvider } from '@material-ui/core';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -14,7 +13,10 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-import TrendingUpIcon from '@material-ui/icons/TrendingUp';
+import { Link } from 'react-router-dom';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+
 
 const drawerWidth = 240;
 
@@ -50,7 +52,7 @@ class Home extends React.Component {
       <AppBar position="fixed" style={appBar}>
         <Toolbar>
           <Typography variant="h6" noWrap>
-            Welcome
+            Welcome!
           </Typography>
         </Toolbar>
       </AppBar>
@@ -59,14 +61,7 @@ class Home extends React.Component {
         variant="permanent"
       >
         <div style={toolbar} />
-        <List>
-          {[ 'Stock', 'Cryptocurrency', 'Signout'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+        <Link to="/login">Login</Link>
         <Divider />
       </Drawer>
       <main>
@@ -81,3 +76,11 @@ class Home extends React.Component {
 }
 export default Home;
 
+ {/* <List>
+          {[ 'Stock', 'Cryptocurrency', 'Signout'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List> */}
