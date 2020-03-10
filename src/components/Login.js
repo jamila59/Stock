@@ -39,8 +39,8 @@ class Login extends React.Component {
 
   render() {
     return (
+      <div style={backgroundStyle}>
       <div style={moveCard}>
-      <div>
       <Card>
         <CardContent>
         <Grid container spacing={1} alignItems="flex-end">
@@ -61,8 +61,8 @@ class Login extends React.Component {
         </Grid>
         </CardContent>
         <CardActions>
-      <Button variant="contained" size="medium" color="Primary" onClick={this.login}>Login</Button>
-      <Button variant="contained" size="medium" color="secondary" onClick={this.signUp}>Sign up</Button>
+      <Button style={moveButton} variant="contained" size="medium" color="Primary" onClick={this.login}>Login</Button>
+      <Button style={moveButton} variant="contained" size="medium" color="secondary" onClick={this.signUp}>Sign up</Button>
     </CardActions>
     </Card>
       </div>
@@ -71,11 +71,30 @@ class Login extends React.Component {
   }
 }
 const moveCard = {
-  paddingLeft:'425px',
+  paddingLeft:'350px',
   minWidth: 365,
   width: '170px',
-  marginTop: 100,
+  marginTop: 300,
   height: '600px',
+  opacity: 0.9,
 }
-
+const moveButton = {
+  paddingLeft: '90px'
+}
+const backgroundStyle = {
+  backgroundPosition: 'center center',
+  height: '100vh',
+ 
+    
+  display: 'inlineBlock',
+  zIndex: '-1',
+  width: '100%',
+  paddingTop: '15%',
+    
+  backgroundRepeat: 'no-repeat',
+  backgroundSize:'cover',
+  flex: 1,
+  resizeMode: 'cover',
+  backgroundImage: 'url(' + 'https://images.pexels.com/photos/290595/pexels-photo-290595.jpeg?cs=srgb&dl=architecture-buildings-business-city-290595.jpg&fm=jpg' + ')'   
+};
 export default Login;

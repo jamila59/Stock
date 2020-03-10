@@ -55,39 +55,39 @@ class Home extends React.Component {
   render() {
     return (
       <div style={root}>
-      <CssBaseline />
-      <AppBar position="fixed" style={appBar}>
-        <Toolbar>
-          <Typography variant="h6" noWrap>
-            Welcome!
-            <Button onClick = {this.logout} variant="contained" color="primary" disableElevation  style={button}>
-            Logout
-            </Button>
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        style={drawer}
-        variant="permanent"
-      >
-        <div style={toolbar} />
-        <br/>
-        <Fab to='/stock' component={Link} >
-          <ShowChartIcon style={icon}/>
-        </Fab>
-        <h2 >Stock</h2>
-        <Divider />
-        <br/>
-        <Fab  to='/crypto' component={Link} >
-          <ShareIcon style={icon}/>
-        </Fab>
-        <h2>Cryptocurrency</h2>
-        <Divider />
-      </Drawer>
-      <main>s
-        <div style={toolbar} />
-      </main>
-    </div>
+        <CssBaseline />
+        <AppBar position="fixed" style={appBar}>
+          <Toolbar>
+            <Typography variant="h6" noWrap>
+              Welcome!
+              <Button onClick = {this.logout} variant="contained" color="primary" disableElevation  style={button}>
+              Logout
+              </Button>
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Drawer
+          style={drawer}
+          variant="permanent"
+        >
+          <div style={toolbar} />
+          <br/>
+          <Fab to='/stock' component={Link} >
+            <ShowChartIcon style={icon}/>
+          </Fab>
+          <h2 >Stock</h2>
+          <Divider />
+          <br/>
+          <Fab  to='/crypto' component={Link} >
+            <ShareIcon style={icon}/>
+          </Fab>
+          <h2>Cryptocurrency</h2>
+          <Divider />
+        </Drawer>
+        <main>s
+          <div style={toolbar} />
+        </main>
+      </div>
     )
   }
 }
