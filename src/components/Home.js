@@ -14,6 +14,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 
 const drawerWidth = 240;
 
@@ -32,7 +33,7 @@ const toolbar = {
   minHeight: '64px'
 }
 const appBar = {
-  zIndex: '+1',
+  zIndex: '1400',
   flex: 1
 }
 
@@ -59,7 +60,7 @@ class Home extends React.Component {
       >
         <div style={toolbar} />
         <List>
-          {[ 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {[ 'Stock', 'Cryptocurrency', 'Signout'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
@@ -80,7 +81,3 @@ class Home extends React.Component {
 }
 export default Home;
 
-{/* <div style={{textAlign: 'center'}}>
-        <h1>You Are Logged In</h1>
-        <button onClick = {this.logout}>Logout</button>
-      </div> */}
