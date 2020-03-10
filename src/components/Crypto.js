@@ -1,5 +1,7 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 class Stock extends React.Component {
   constructor(props) {
@@ -13,6 +15,7 @@ class Stock extends React.Component {
   componentDidMount() {
     this.fetchStock();
   }
+  
 
   fetchStock() {
     const pointerToThis = this;
@@ -49,9 +52,11 @@ class Stock extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={moveCard}>
+      <Card>
+        <CardContent>
         <h1>Crypto Market</h1>
-        <Plot
+        <Plot 
           data={[
             {
               x: this.state.stockChartXValues,
@@ -61,11 +66,19 @@ class Stock extends React.Component {
               marker: {color: 'red'},
             }
           ]}
-          layout={{width: 720, height: 550, title: 'Stock-Plot'}}
+          layout={{ width: 720, height: 550, title: 'Stock-Plot'}}
         />
+        </CardContent>
+      </Card>
       </div>
     )
   }
 }
+const moveCard = {
+  paddingTop: '100px',
+  paddingLeft:'125px',
+}
+
 
 export default Stock;
+

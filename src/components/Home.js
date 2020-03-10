@@ -5,18 +5,12 @@ import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import { Link } from 'react-router-dom';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
-
+import ShowChartIcon from '@material-ui/icons/ShowChart';
+import ShareIcon from '@material-ui/icons/Share';
+import Button from '@material-ui/core/Button';
 
 const drawerWidth = 240;
 
@@ -32,11 +26,16 @@ const toolbar = {
   alignItems: 'center',
   justifyContent: 'flex-end',
   padding:  '8px',
-  minHeight: '64px'
+  minHeight: '64px',
 }
 const appBar = {
   zIndex: '1400',
   flex: 1
+}
+
+const icon = {
+  width: 60,
+  height: 60
 }
 
 class Home extends React.Component {
@@ -53,6 +52,9 @@ class Home extends React.Component {
         <Toolbar>
           <Typography variant="h6" noWrap>
             Welcome!
+            <Button onClick = {this.logout} variant="contained" color="primary" disableElevation>
+            Logout
+            </Button>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -61,13 +63,18 @@ class Home extends React.Component {
         variant="permanent"
       >
         <div style={toolbar} />
-        <Link to="/login">Login</Link>
+        <br/>
+        <ShowChartIcon
+        style={icon}/>
+        <Link to="/stock">Stock</Link>
+        <br/>
+        <ShareIcon
+         style={icon}/>
+         <Link to="/crypto">Cryptocurrency</Link>
         <Divider />
       </Drawer>
       <main>
         <div style={toolbar} />
-          <h1>You Are Logged In</h1>
-          <button onClick = {this.logout}>Logout</button>
       </main>
     </div>
       
@@ -76,11 +83,4 @@ class Home extends React.Component {
 }
 export default Home;
 
- {/* <List>
-          {[ 'Stock', 'Cryptocurrency', 'Signout'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List> */}
+ 

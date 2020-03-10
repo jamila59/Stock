@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import fire from './config/fire'
 import Login from './components/Login.js';
-import Stock from './components/Stock'
+import Stock from './components/Stock';
+import Crypto from './components/Crypto';
 import Home from './components/Home.js';
 import ClippedDrawer from './components/Selector';
 import { Switch, Route, } from 'react-router-dom';
@@ -35,12 +36,9 @@ class App extends Component {
     return (
       <div className="App">
         { this.state.user ? ( <Home /> ) : ( <Login /> ) }
-        {/* <ClippedDrawer/> */}
-        {/* <Home/> */}
-        {/* <Stock/> */}
         <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/login' component={Login} /> 
+          <Route exact path='/crypto' component={Crypto} />
+          <Route path='/stock' component={Stock} /> 
         </Switch>
       </div>
     );
