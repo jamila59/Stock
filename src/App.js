@@ -34,8 +34,8 @@ class App extends Component {
     return (
       <div className="App">
         {/* { this.state.user ? ( <Home /> ) : ( <Login /> ) } */}
-        <ClippedDrawer/>
-        {/* <Home/> */}
+        {/* <ClippedDrawer/> */}
+        <Home/>
         {/* <Stock/> */}
       </div>
     );
