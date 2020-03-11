@@ -1,7 +1,7 @@
 # _Stock-Capstone_
 
 # _Link_
- _https://github.com/jamila59/Stock-Capstone-.git_
+ _https://stok-29912.firebaseapp.com/_
 
 
 #### _React Webapplication. 3.05.2020_
